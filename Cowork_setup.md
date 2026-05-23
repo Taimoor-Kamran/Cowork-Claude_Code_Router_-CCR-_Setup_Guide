@@ -1,38 +1,38 @@
+
 # Cowork + Claude Code Router (CCR) Setup Guide
-### Qwen ya kisi bhi third-party model ke saath Cowork use karne ka tarika
+### How to Use Cowork with Qwen or Any Third-Party Model
  
 ---
  
 ## Prerequisites
  
-Shuru karne se pehle yeh cheezein honi chahiye:
+Before getting started, make sure you have the following:
  
 - Windows 10/11
-- **Node.js** installed — [nodejs.org](https://nodejs.org) se download karo
-- **VS Code** (optional, Cline ke liye)
-- **Cowork** (Anthropic ka desktop app) installed
+- **Node.js** installed — download from [nodejs.org](https://nodejs.org)
+- **Cowork** (Anthropic's desktop app) installed
 - Internet connection
 ---
  
-## Step 1 — Node.js Check Karo
+## Step 1 — Check Node.js
  
-Command Prompt kholo aur likho:
+Open Command Prompt and type:
  
 ```
 node --version
 ```
  
-Agar version aaye (jaise `v24.x.x`) toh theek hai. Agar error aaye toh nodejs.org se install karo.
+If a version number appears (e.g. `v24.x.x`), you're good to go. If you get an error, install Node.js from nodejs.org first.
  
 ---
  
-## Step 2 — Claude Code Router Install Karo
+## Step 2 — Install Claude Code Router
  
 ```
 npm install -g @musistudio/claude-code-router
 ```
  
-Install hone ke baad check karo:
+After installation, verify it works:
  
 ```
 ccr --version
@@ -40,28 +40,28 @@ ccr --version
  
 ---
  
-## Step 3 — Qwen API Key Banao
+## Step 3 — Get Your Qwen API Key
  
-1. Jaiye: [modelstudio.console.alibabacloud.com](https://modelstudio.console.alibabacloud.com)
-2. Account banao (Singapore region select karo)
-3. Payment method add karo — Worry-Free Mode enable karo
-4. Left sidebar mein **API Key** click karo
-5. **Create API Key** click karo
-6. Key copy karo — `sk-xxxx` format mein hogi
-> **Important:** Singapore region ke liye alag API endpoint use hota hai:
+1. Go to: [modelstudio.console.alibabacloud.com](https://modelstudio.console.alibabacloud.com)
+2. Create an account (select the **Singapore** region)
+3. Add a payment method and enable **Worry-Free Mode**
+4. In the left sidebar, click **API Key**
+5. Click **Create API Key**
+6. Copy your key — it will be in the format `sk-xxxx`
+> **Important:** The Singapore region uses a different API endpoint:
 > `https://dashscope-intl.aliyuncs.com`
  
 ---
  
-## Step 4 — CCR Configure Karo
+## Step 4 — Configure CCR
  
-Notepad mein config file kholo:
+Open the config file in Notepad:
  
 ```
 notepad %USERPROFILE%\.claude-code-router\config.json
 ```
  
-Yeh content paste karo (apni key daalo):
+Paste the following content (replace with your actual API key):
  
 ```json
 {
@@ -74,7 +74,7 @@ Yeh content paste karo (apni key daalo):
     {
       "name": "qwen",
       "api_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
-      "api_key": "sk-xxxx-tumhari-key",
+      "api_key": "sk-your-api-key-here",
       "models": [
         "qwen3-coder-plus",
         "qwen3-235b-a22b",
@@ -94,23 +94,23 @@ Yeh content paste karo (apni key daalo):
 }
 ```
  
-Save karo (`Ctrl+S`).
+Save the file (`Ctrl+S`).
  
 ---
  
-## Step 5 — CCR Server Start Karo
+## Step 5 — Start the CCR Server
  
 ```
 ccr start
 ```
  
-Status check karne ke liye:
+To check the server status:
  
 ```
 ccr status
 ```
  
-Output kuch aisa hoga:
+You should see output like this:
  
 ```
 ✅ Status: Running
@@ -120,55 +120,55 @@ Output kuch aisa hoga:
  
 ---
  
-## Step 6 — Cowork Configure Karo
+## Step 6 — Configure Cowork
  
-### Developer Mode Enable Karo
+### Enable Developer Mode
  
-Cowork mein jaiye:
+Inside Cowork, navigate to:
 ```
 Help > Troubleshooting > Enable Developer Mode
 ```
  
-### Third-Party Inference Configure Karo
+### Configure Third-Party Inference
  
-Menu bar mein:
+From the menu bar:
 ```
 Developer > Configure Third-Party Inference
 ```
  
-Yeh settings daalo:
+Enter the following settings:
  
 | Field | Value |
 |-------|-------|
 | Backend | Gateway (Anthropic-compatible) |
 | Gateway base URL | `http://127.0.0.1:3456` |
-| Gateway API key | Tumhari Qwen key |
+| Gateway API key | Your Qwen API key |
 | Auth scheme | `bearer` |
  
-**Apply locally** click karo, phir **Relaunch Now**.
+Click **Apply locally**, then **Relaunch Now**.
  
 ---
  
-## Step 7 — Cowork Config File Update Karo
+## Step 7 — Update the Cowork Config File
  
-Notepad mein kholo:
+Open the file in Notepad:
  
 ```
-notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<tumhari-file-id>.json"
+notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<your-file-id>.json"
 ```
  
-> File ID dhundhne ke liye:
+> To find your file ID, run:
 > ```
 > dir "%LOCALAPPDATA%\Claude-3p\configLibrary"
 > ```
  
-Yeh content daalo:
+Replace the contents with:
  
 ```json
 {
   "inferenceProvider": "gateway",
   "inferenceGatewayBaseUrl": "http://127.0.0.1:3456",
-  "inferenceGatewayApiKey": "sk-xxxx-tumhari-key",
+  "inferenceGatewayApiKey": "sk-your-api-key-here",
   "inferenceGatewayHeaders": {
     "X-Title": "Claude-Cowork"
   },
@@ -176,31 +176,31 @@ Yeh content daalo:
 }
 ```
  
-Save karo, Cowork restart karo.
+Save the file and restart Cowork.
  
 ---
  
-## Step 8 — Test Karo
+## Step 8 — Test It
  
-Cowork mein type karo:
+Type the following in Cowork:
  
 ```
 hello
 ```
  
-Agar response aaye toh **sab kuch kaam kar raha hai!** 🎉
+If you get a response, everything is working correctly! 🎉
  
 ---
  
-## Rozana Use Karne Ka Tarika
+## Daily Usage
  
-Har baar PC start karne ke baad:
+Every time you restart your PC, simply run:
  
 ```
 ccr start
 ```
  
-Bas itna — Cowork automatically router se connect ho jayega.
+That's it — Cowork will automatically connect to the router.
  
 ---
  
@@ -208,18 +208,18 @@ Bas itna — Cowork automatically router se connect ho jayega.
  
 | Problem | Solution |
 |---------|----------|
-| `Can't reach 127.0.0.1:3456` | `ccr start` likho CMD mein |
-| `402 credits error` | API key check karo, free quota dekho |
-| `invalid_api_key` | Singapore region URL use karo: `dashscope-intl` |
-| Response bohat slow hai | Free tier pe normal hai, thoda wait karo |
-| `Provider undefined` | config.json mein provider name check karo |
+| `Can't reach 127.0.0.1:3456` | Run `ccr start` in Command Prompt |
+| `402 credits error` | Check your API key and free quota |
+| `invalid_api_key` | Make sure you're using the Singapore endpoint: `dashscope-intl` |
+| Response is very slow | This is normal on the free tier — just wait a moment |
+| `Provider undefined` | Check the provider name in your config.json |
  
 ---
  
-## Notes
+## Important Notes
  
-- **Free tier** mein response slow hoga — yeh normal hai
-- CCR server band ho jata hai PC restart pe — `ccr start` dobara chalao
-- Cowork ka UI Claude jaisa lagega lekin peeche Qwen kaam karega
-- Default Anthropic mode pe wapas jaane ke liye: Cowork settings mein **Default** select karo
+- Responses may be slow on the **free tier** — this is expected behavior
+- The CCR server stops when your PC restarts — run `ccr start` again each time
+- Cowork's UI will look like Claude, but Qwen is running in the background
+- To switch back to Anthropic, simply select **Default** in Cowork settings
 ---
