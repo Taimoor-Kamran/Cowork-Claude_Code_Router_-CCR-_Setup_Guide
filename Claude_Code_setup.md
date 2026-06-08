@@ -124,7 +124,7 @@ ccr start
 
 ![Running ccr start](images/step5-ccr-start.png)
  
-To check the server status:
+To check the server status open another CMD and type:
  
 ```
 ccr status
