@@ -63,13 +63,19 @@ ccr --version
  
 ## Step 4 — Configure CCR
  
-Open the config file in Notepad:
- 
+Open the config file in a text editor:
+
+**Windows Command Prompt:**
 ```
 notepad %USERPROFILE%\.claude-code-router\config.json
 ```
 
-![Opening CCR config in Notepad](images/step4-open-config.png)
+**WSL / Linux terminal:**
+```
+nano ~/.claude-code-router/config.json
+```
+
+![Opening CCR config in text editor](images/step4-open-config.png)
  
 Paste the following content (replace with your actual API key):
  
@@ -173,16 +179,23 @@ Click **Apply locally**, then **Relaunch Now**.
  
 ## Step 7 — Update the Cowork Config File
  
-Open the file in Notepad:
- 
+Open the file in a text editor:
+
+**Windows Command Prompt:**
 ```
 notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<your-file-id>.json"
 ```
- 
-> To find your file ID, run:
-> ```
-> dir "%LOCALAPPDATA%\Claude-3p\configLibrary"
-> ```
+
+**WSL / Linux terminal:**
+```
+notepad.exe "/mnt/c/Users/$USER/AppData/Local/Claude-3p/configLibrary/<your-file-id>.json"
+```
+
+> To find your file ID:
+>
+> **Windows CMD:** `dir "%LOCALAPPDATA%\Claude-3p\configLibrary"`
+>
+> **WSL:** `ls /mnt/c/Users/$USER/AppData/Local/Claude-3p/configLibrary/`
 
 ![Finding the config file ID](images/step7-find-file-id.png)
  
