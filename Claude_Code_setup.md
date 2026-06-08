@@ -143,10 +143,25 @@ You should see output like this:
 ---
  
 ## Step 6 — Configure Cowork
- 
+
+### Install Claude Desktop
+
+1. Go to [claude.ai/download](https://claude.ai/download)
+2. Click **Download for Windows**
+3. Run the installer (`Claude-Setup-x64.exe`) and follow the prompts
+4. Sign in with your Anthropic account when prompted
+
+![Claude Desktop download page](images/step6-claude-download.png)
+
+![Claude Desktop installer running](images/step6-claude-installer.png)
+
+![Claude Desktop sign in screen](images/step6-claude-signin.png)
+
+---
+
 ### Enable Developer Mode
  
-Inside Cowork, navigate to:
+Inside Claude Desktop, navigate to:
 ```
 Help > Troubleshooting > Enable Developer Mode
 ```
