@@ -23,6 +23,8 @@ node --version
 ```
  
 If a version number appears (e.g. `v24.x.x`), you're good to go. If you get an error, install Node.js from nodejs.org first.
+
+![Node.js version check](images/step1-node-version.png)
  
 ---
  
@@ -31,12 +33,16 @@ If a version number appears (e.g. `v24.x.x`), you're good to go. If you get an e
 ```
 npm install -g @musistudio/claude-code-router
 ```
+
+![Installing CCR via npm](images/step2-ccr-install.png)
  
 After installation, verify it works:
  
 ```
 ccr --version
 ```
+
+![CCR version check](images/step2-ccr-version.png)
  
 ---
  
@@ -50,6 +56,8 @@ ccr --version
 6. Copy your key — it will be in the format `sk-xxxx`
 > **Important:** The Singapore region uses a different API endpoint:
 > `https://dashscope-intl.aliyuncs.com`
+
+![Qwen API Key creation page](images/step3-api-key.png)
  
 ---
  
@@ -60,6 +68,8 @@ Open the config file in Notepad:
 ```
 notepad %USERPROFILE%\.claude-code-router\config.json
 ```
+
+![Opening CCR config in Notepad](images/step4-open-config.png)
  
 Paste the following content (replace with your actual API key):
  
@@ -93,6 +103,8 @@ Paste the following content (replace with your actual API key):
   }
 }
 ```
+
+![CCR config file filled in Notepad](images/step4-config-filled.png)
  
 Save the file (`Ctrl+S`).
  
@@ -103,12 +115,16 @@ Save the file (`Ctrl+S`).
 ```
 ccr start
 ```
+
+![Running ccr start](images/step5-ccr-start.png)
  
 To check the server status:
  
 ```
 ccr status
 ```
+
+![CCR status output](images/step5-ccr-status.png)
  
 You should see output like this:
  
@@ -128,6 +144,8 @@ Inside Cowork, navigate to:
 ```
 Help > Troubleshooting > Enable Developer Mode
 ```
+
+![Enabling Developer Mode in Cowork](images/step6-developer-mode.png)
  
 ### Configure Third-Party Inference
  
@@ -135,6 +153,8 @@ From the menu bar:
 ```
 Developer > Configure Third-Party Inference
 ```
+
+![Opening Third-Party Inference settings](images/step6-third-party-menu.png)
  
 Enter the following settings:
  
@@ -146,6 +166,8 @@ Enter the following settings:
 | Auth scheme | `bearer` |
  
 Click **Apply locally**, then **Relaunch Now**.
+
+![Third-Party Inference settings filled in](images/step6-third-party-filled.png)
  
 ---
  
@@ -161,6 +183,8 @@ notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<your-file-id>.json"
 > ```
 > dir "%LOCALAPPDATA%\Claude-3p\configLibrary"
 > ```
+
+![Finding the config file ID](images/step7-find-file-id.png)
  
 Replace the contents with:
  
@@ -175,6 +199,8 @@ Replace the contents with:
   "inferenceGatewayDefaultModel": "qwen3-coder-plus"
 }
 ```
+
+![Cowork config file updated in Notepad](images/step7-cowork-config-filled.png)
  
 Save the file and restart Cowork.
  
@@ -188,7 +214,9 @@ Type the following in Cowork:
 hello
 ```
  
-If you get a response, everything is working correctly! 🎉
+If you get a response, everything is working correctly!
+
+![Cowork responding to hello message](images/step8-test-response.png)
  
 ---
  
@@ -199,6 +227,8 @@ Every time you restart your PC, simply run:
 ```
 ccr start
 ```
+
+![Running ccr start on daily use](images/daily-ccr-start.png)
  
 That's it — Cowork will automatically connect to the router.
  
