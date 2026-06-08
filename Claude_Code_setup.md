@@ -169,26 +169,35 @@ Help > Troubleshooting > Enable Developer Mode
 ![Enabling Developer Mode in Cowork](images/step6-developer-mode.png)
  
 ### Configure Third-Party Inference
- 
-From the menu bar:
+
+After enabling Developer Mode, a new **Developer** menu will appear in the Claude Desktop menu bar at the top of the window.
+
+From that menu bar, click:
 ```
 Developer > Configure Third-Party Inference
 ```
 
 ![Opening Third-Party Inference settings](images/step6-third-party-menu.png)
- 
-Enter the following settings:
- 
-| Field | Value |
-|-------|-------|
-| Backend | Gateway (Anthropic-compatible) |
-| Gateway base URL | `http://127.0.0.1:3456` |
-| Gateway API key | Your Qwen API key |
-| Auth scheme | `bearer` |
- 
-Click **Apply locally**, then **Relaunch Now**.
+
+A settings dialog will open. Fill in each field as follows:
+
+| Field | Where to find it / What to enter |
+|-------|----------------------------------|
+| **Backend** | Click the dropdown and select **Gateway (Anthropic-compatible)** |
+| **Gateway base URL** | Type exactly: `http://127.0.0.1:3456` — this is the local CCR server you started in Step 5 |
+| **Gateway API key** | Paste your Qwen API key here (the `sk-xxxx` key from Step 3) |
+| **Auth scheme** | Select or type `bearer` |
+
+![Third-Party Inference dialog open](images/step6-third-party-dialog.png)
+
+Once all fields are filled in:
+
+1. Click **Apply locally** — this saves the settings to your machine only
+2. Click **Relaunch Now** — Claude Desktop will restart and connect to CCR
 
 ![Third-Party Inference settings filled in](images/step6-third-party-filled.png)
+
+> **Note:** After relaunch, Claude Desktop's UI looks the same but requests are now routed through your CCR server to Qwen.
  
 ---
  
