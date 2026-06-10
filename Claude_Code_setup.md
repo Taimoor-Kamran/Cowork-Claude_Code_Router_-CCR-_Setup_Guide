@@ -201,49 +201,7 @@ Once all fields are filled in:
  
 ---
  
-## Step 7 — Update the Cowork Config File
- 
-Open the file in a text editor:
-
-**Windows Command Prompt:**
-```
-notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<your-file-id>.json"
-```
-
-**WSL / Linux terminal:**
-```
-notepad.exe "/mnt/c/Users/$USER/AppData/Local/Claude-3p/configLibrary/<your-file-id>.json"
-```
-
-> To find your file ID:
->
-> **Windows CMD:** `dir "%LOCALAPPDATA%\Claude-3p\configLibrary"`
->
-> **WSL:** `ls /mnt/c/Users/$USER/AppData/Local/Claude-3p/configLibrary/`
-
-![Finding the config file ID](images/step7-find-file-id.png)
- 
-Replace the contents with:
- 
-```json
-{
-  "inferenceProvider": "gateway",
-  "inferenceGatewayBaseUrl": "http://127.0.0.1:3456",
-  "inferenceGatewayApiKey": "sk-your-api-key-here",
-  "inferenceGatewayHeaders": {
-    "X-Title": "Claude-Cowork"
-  },
-  "inferenceGatewayDefaultModel": "qwen3-coder-plus"
-}
-```
-
-![Cowork config file updated in Notepad](images/step7-cowork-config-filled.png)
- 
-Save the file and restart Cowork.
- 
----
- 
-## Step 8 — Test It
+## Step 7 — Test It
  
 Type the following in Cowork:
  
