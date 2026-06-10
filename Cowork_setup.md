@@ -165,9 +165,10 @@ Enter the following settings:
 | Gateway API key | Your Qwen API key |
 | Auth scheme | `bearer` |
  
-Click **Apply locally**, then **Relaunch Now**.
+Click **Apply Changes**, then **Relaunch Now**.
 
 ![Third-Party Inference settings filled in](images/step6-third-party-filled.png)
+
  
 ---
  
