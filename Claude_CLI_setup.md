@@ -122,3 +122,69 @@ You should see a version number for Claude Code and the CCR help menu.
 > Keep your API key safe. Never share it with anyone.
 
 ---
+
+## Step 5: Create Config File
+
+**Create the required folder** — open Command Prompt and run:
+
+```
+mkdir %USERPROFILE%\.claude-code-router
+mkdir %USERPROFILE%\.claude
+```
+
+![Creating config folders](images/cli-step5-mkdir.png)
+
+**Create the config file** — open it in Notepad:
+
+```
+notepad %USERPROFILE%\.claude-code-router\config.json
+```
+
+Notepad will ask if you want to create a new file — click **Yes**.
+
+![Notepad creating new file](images/cli-step5-notepad-new.png)
+
+Paste the following content, **replacing `YOUR_QWEN_API_KEY_HERE` with your real API key**:
+
+```json
+{
+  "LOG": true,
+  "LOG_LEVEL": "info",
+  "HOST": "127.0.0.1",
+  "PORT": 3456,
+  "Providers": [
+    {
+      "name": "qwen",
+      "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+      "api_key": "YOUR_QWEN_API_KEY_HERE",
+      "models": [
+        "qwen3-coder-plus",
+        "qwen-max",
+        "qwen-plus"
+      ]
+    }
+  ],
+  "Router": {
+    "default": "qwen,qwen3-coder-plus",
+    "background": "qwen,qwen-plus",
+    "think": "qwen,qwen-max",
+    "longContext": "qwen,qwen3-coder-plus"
+  }
+}
+```
+
+![Config file filled in Notepad](images/cli-step5-config-filled.png)
+
+Save the file with `Ctrl+S`.
+
+**Verify the file was saved correctly:**
+
+```
+type %USERPROFILE%\.claude-code-router\config.json
+```
+
+![Verifying config file contents](images/cli-step5-verify.png)
+
+You should see your config with your API key inside.
+
+---
