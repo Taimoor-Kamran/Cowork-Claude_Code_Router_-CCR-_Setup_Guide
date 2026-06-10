@@ -1,17 +1,18 @@
 
-# Cowork + Claude Code Router (CCR) Setup Guide
-### How to Use Cowork with Qwen or Any Third-Party Model
- 
+# Claude CLI Setup Guide
+### How to Use Claude Code CLI with Claude Code Router (CCR) + Qwen
+
 ---
- 
+
 ## Prerequisites
- 
+
 Before getting started, make sure you have the following:
- 
-- Windows 10/11
+
+- Windows 10/11 or WSL (Windows Subsystem for Linux)
 - **Node.js** installed — download from [nodejs.org](https://nodejs.org)
-- **Cowork** (Anthropic's desktop app) installed
+- **CCR configured with Qwen** — complete Steps 1–5 from the [Cowork setup guide](Claude_Cowork_setup.md) first
 - Internet connection
+
 ---
  
 ## Step 1 — Check Node.js
