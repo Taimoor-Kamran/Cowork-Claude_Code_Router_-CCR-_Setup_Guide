@@ -216,10 +216,63 @@ source ~/.bashrc
 
 ---
 
+## Step 7 — Test It
+
+Run Claude CLI:
+
+```
+claude
+```
+
+![Claude CLI launching](images/cli-step7-launch.png)
+
+Type a message to test:
+
+```
+hello
+```
+
+If you get a response, Claude CLI is now running through CCR and using Qwen in the background.
+
+![Claude CLI responding via Qwen](images/cli-step7-response.png)
+
+---
+
+## Daily Usage
+
+Every time you restart your PC:
+
+1. Start CCR first:
+```
+ccr start
+```
+
+2. Then run Claude CLI:
+```
+claude
+```
+
+![Daily usage — ccr start then claude](images/cli-daily-usage.png)
+
+> If you completed Step 6, the environment variables are already set permanently — you only need to run `ccr start`.
+
+---
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| `authentication_error` or `invalid_api_key` | Make sure `ANTHROPIC_API_KEY` is set to your Qwen key, not an Anthropic key |
+| `Could not connect` / connection refused | CCR is not running — run `ccr start` first |
+| `Provider undefined` | Check the provider name in your CCR `config.json` |
+| Responses are very slow | Normal on the free Qwen tier — just wait |
+| Changes to `.bashrc` not taking effect | Run `source ~/.bashrc` or open a new terminal |
+
+---
+
 ## Important Notes
- 
-- Responses may be slow on the **free tier** — this is expected behavior
-- The CCR server stops when your PC restarts — run `ccr start` again each time
-- Cowork's UI will look like Claude, but Qwen is running in the background
-- To switch back to Anthropic, simply select **Default** in Cowork settings
+
+- Claude CLI's interface looks and feels the same — only the backend model (Qwen) is different
+- CCR stops when your PC restarts — always run `ccr start` before using `claude`
+- To switch back to Anthropic's Claude, remove `ANTHROPIC_BASE_URL` and set a real Anthropic API key
 ---
