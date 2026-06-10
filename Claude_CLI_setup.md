@@ -64,3 +64,25 @@ npm --version
 You should see `v20.x.x` for Node.js and `10.x.x` (or higher) for npm.
 
 ---
+
+## Step 2: Install Qwen CLI
+
+Open **Command Prompt** and run:
+
+```
+npm install -g @qwen-code/qwen-code@latest
+```
+
+![Installing Qwen CLI](images/cli-step2-qwen-install.png)
+
+**Verify installation:**
+
+```
+qwen --version
+```
+
+![Qwen CLI version check](images/cli-step2-qwen-version.png)
+
+You should see a version number like `0.15.6`.
+
+---
