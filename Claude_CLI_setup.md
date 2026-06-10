@@ -15,36 +15,24 @@ Before getting started, make sure you have the following:
 
 ---
  
-## Step 1 — Check Node.js
- 
-Open Command Prompt and type:
- 
-```
-node --version
-```
- 
-If a version number appears (e.g. `v24.x.x`), you're good to go. If you get an error, install Node.js from nodejs.org first.
+## Step 1 — Install Claude Code CLI
 
-![Node.js version check](images/step1-node-version.png)
- 
----
- 
-## Step 2 — Install Claude Code Router
- 
+Run the following command in your terminal:
+
 ```
-npm install -g @musistudio/claude-code-router
+npm install -g @anthropic-ai/claude-code
 ```
 
-![Installing CCR via npm](images/step2-ccr-install.png)
- 
+![Installing Claude Code CLI via npm](images/cli-step1-install.png)
+
 After installation, verify it works:
- 
+
 ```
-ccr --version
+claude --version
 ```
 
-![CCR version check](images/step2-ccr-version.png)
- 
+![Claude CLI version check](images/cli-step1-version.png)
+
 ---
  
 ## Step 3 — Get Your Qwen API Key
