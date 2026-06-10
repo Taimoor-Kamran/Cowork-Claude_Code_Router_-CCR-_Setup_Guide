@@ -176,7 +176,7 @@ Click **Apply locally**, then **Relaunch Now**.
 Open the file in Notepad:
  
 ```
-notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<your-file-id>.json"
+notepad "notepad %USERPROFILE%\.claude-code-router\config.json"
 ```
  
 > To find your file ID, run:
