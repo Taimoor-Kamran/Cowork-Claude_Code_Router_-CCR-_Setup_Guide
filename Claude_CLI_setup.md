@@ -30,3 +30,13 @@ This guide helps you use **Claude Code** (Anthropic's powerful AI coding assista
 > **No Anthropic account needed. Just your Qwen API key.**
 
 ---
+
+## Requirements
+
+| Requirement | Details |
+|---|---|
+| Operating System | Windows 10 or Windows 11 |
+| Node.js | v18 or later |
+| Qwen API Key | From Alibaba Cloud (paid plan) |
+
+---
