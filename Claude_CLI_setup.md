@@ -86,3 +86,26 @@ qwen --version
 You should see a version number like `0.15.6`.
 
 ---
+
+## Step 3: Install Claude Code + Router
+
+Install both tools at once in **Command Prompt**:
+
+```
+npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router@latest
+```
+
+![Installing Claude Code and CCR](images/cli-step3-install.png)
+
+**Verify both are installed:**
+
+```
+claude --version
+ccr --version
+```
+
+![Claude and CCR version check](images/cli-step3-versions.png)
+
+You should see a version number for Claude Code and the CCR help menu.
+
+---
