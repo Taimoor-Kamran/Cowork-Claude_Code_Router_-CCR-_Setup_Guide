@@ -178,7 +178,44 @@ export ANTHROPIC_API_KEY=sk-your-qwen-key-here
 > These only last for the current terminal session. See Step 6 to make them permanent.
 
 ---
- 
+
+## Step 6 — Make the Settings Permanent (Recommended)
+
+### On WSL / Linux
+
+Open your shell profile:
+
+```
+nano ~/.bashrc
+```
+
+Add these two lines at the bottom:
+
+```
+export ANTHROPIC_BASE_URL=http://127.0.0.1:3456
+export ANTHROPIC_API_KEY=sk-your-qwen-key-here
+```
+
+![Adding env vars to .bashrc](images/cli-step6-bashrc.png)
+
+Save (`Ctrl+O`, `Enter`) and exit (`Ctrl+X`), then apply:
+
+```
+source ~/.bashrc
+```
+
+### On Windows (System Environment Variables)
+
+1. Press `Win + S`, search for **Environment Variables**, and open it
+2. Under **User variables**, click **New**
+3. Add `ANTHROPIC_BASE_URL` = `http://127.0.0.1:3456`
+4. Add another: `ANTHROPIC_API_KEY` = your Qwen API key
+5. Click **OK** and restart your terminal
+
+![Adding system environment variables on Windows](images/cli-step6-windows-env.png)
+
+---
+
 ## Important Notes
  
 - Responses may be slow on the **free tier** — this is expected behavior
