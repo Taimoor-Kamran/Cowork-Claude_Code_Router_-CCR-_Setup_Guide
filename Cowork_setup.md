@@ -184,7 +184,7 @@ notepad "%LOCALAPPDATA%\Claude-3p\configLibrary\<your-file-id>.json"
 > dir "%LOCALAPPDATA%\Claude-3p\configLibrary"
 > ```
 
-Now copy your file id and replace your <your-file-id>
+> Now copy your file id and replace your <your-file-id>
 
 ![Finding the config file ID](images/step7-find-file-id.png)
  
