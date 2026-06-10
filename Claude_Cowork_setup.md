@@ -28,7 +28,25 @@ If a version number appears (e.g. `v24.x.x`), you're good to go. If you get an e
  
 ---
  
-## Step 2 — Install Claude Code Router
+## Step 2 — Install Qwen CLI
+
+```
+npm install -g @qwen-code/qwen-code@latest
+```
+
+![Installing Qwen CLI](images/cli-step2-qwen-install.png)
+
+**Verify installation:**
+
+```
+qwen --version
+```
+
+![Qwen CLI version check](images/cli-step2-qwen-version.png)
+
+---
+
+## Step 3 — Install Claude Code Router
  
 ```
 npm install -g @musistudio/claude-code-router
@@ -46,7 +64,7 @@ ccr --version
  
 ---
  
-## Step 3 — Get Your Qwen API Key
+## Step 4 — Get Your Qwen API Key
  
 1. Go to: [modelstudio.console.alibabacloud.com](https://modelstudio.console.alibabacloud.com)
 2. Create an account (select the **Singapore** region)
@@ -61,7 +79,7 @@ ccr --version
  
 ---
  
-## Step 4 — Configure CCR
+## Step 5 — Configure CCR
  
 Open the config file in a text editor:
 
@@ -116,7 +134,7 @@ Save the file (`Ctrl+S`).
  
 ---
  
-## Step 5 — Start the CCR Server
+## Step 6 — Start the CCR Server
  
 ```
 ccr start
@@ -142,7 +160,7 @@ You should see output like this:
  
 ---
  
-## Step 6 — Configure Cowork
+## Step 7 — Configure Cowork
 
 ### Install Claude Desktop
 
@@ -200,7 +218,7 @@ Once all fields are filled in:
  
 ---
  
-## Step 7 — Test It
+## Step 8 — Test It
  
 Type the following in Cowork:
  
