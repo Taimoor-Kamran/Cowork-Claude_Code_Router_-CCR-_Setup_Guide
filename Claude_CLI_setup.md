@@ -51,18 +51,42 @@ claude --version
 
 ---
  
-## Step 4 — Configure CCR
- 
-Open the config file in Notepad:
- 
+## Step 3 — Install and Configure CCR
+
+### Install CCR
+
+```
+npm install -g @musistudio/claude-code-router
+```
+
+![Installing CCR via npm](images/step2-ccr-install.png)
+
+Verify it works:
+
+```
+ccr --version
+```
+
+![CCR version check](images/step2-ccr-version.png)
+
+### Configure CCR
+
+Open the config file:
+
+**Windows Command Prompt:**
 ```
 notepad %USERPROFILE%\.claude-code-router\config.json
 ```
 
-![Opening CCR config in Notepad](images/step4-open-config.png)
- 
-Paste the following content (replace with your actual API key):
- 
+**WSL / Linux terminal:**
+```
+nano ~/.claude-code-router/config.json
+```
+
+![Opening CCR config](images/step4-open-config.png)
+
+Paste the following (replace with your actual Qwen API key):
+
 ```json
 {
   "LOG": true,
@@ -94,10 +118,10 @@ Paste the following content (replace with your actual API key):
 }
 ```
 
-![CCR config file filled in Notepad](images/step4-config-filled.png)
- 
-Save the file (`Ctrl+S`).
- 
+![CCR config filled in](images/step4-config-filled.png)
+
+Save the file (`Ctrl+S` on Notepad, `Ctrl+O` then `Enter` on nano).
+
 ---
  
 ## Step 5 — Start the CCR Server
