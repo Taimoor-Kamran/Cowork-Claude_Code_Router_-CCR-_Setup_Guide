@@ -188,14 +188,13 @@ A settings dialog will open. Fill in each field as follows:
 | **Gateway API key** | Paste your Qwen API key here (the `sk-xxxx` key from Step 3) |
 | **Auth scheme** | Select or type `bearer` |
 
-![Third-Party Inference dialog open](images/step6-third-party-dialog.png)
+![Third-Party Inference settings filled in](images/step6-third-party-filled.png)
 
 Once all fields are filled in:
 
 1. Click **Apply locally** — this saves the settings to your machine only
 2. Click **Relaunch Now** — Claude Desktop will restart and connect to CCR
 
-![Third-Party Inference settings filled in](images/step6-third-party-filled.png)
 
 > **Note:** After relaunch, Claude Desktop's UI looks the same but requests are now routed through your CCR server to Qwen.
  
