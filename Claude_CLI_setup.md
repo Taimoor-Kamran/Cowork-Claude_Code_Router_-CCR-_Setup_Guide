@@ -56,7 +56,6 @@ This guide helps you use **Claude Code** (Anthropic's powerful AI coding assista
 
 ```
 node --version
-npm --version
 ```
 
 ![Node.js version check](images/step1-node-version.png)
