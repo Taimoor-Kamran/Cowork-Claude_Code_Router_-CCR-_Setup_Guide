@@ -218,7 +218,7 @@ ccr code
 hi
 ```
 
-![Claude Code responding via Qwen](images/cli-step6-response.png)
+![Claude Code responding via Qwen](images/step8-test-response.png)
 
 If Qwen responds, your setup is complete!
 
