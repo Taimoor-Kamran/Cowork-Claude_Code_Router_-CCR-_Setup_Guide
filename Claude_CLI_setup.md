@@ -150,80 +150,33 @@ You should see:
 
 ---
  
-## Step 6 — Configure Cowork
- 
-### Enable Developer Mode
- 
-Inside Cowork, navigate to:
+## Step 5 — Point Claude CLI to CCR
+
+Claude CLI reads two environment variables to know where to send requests:
+
+| Variable | Value |
+|----------|-------|
+| `ANTHROPIC_BASE_URL` | `http://127.0.0.1:3456` — your local CCR server |
+| `ANTHROPIC_API_KEY` | Your Qwen API key (`sk-xxxx` from Step 2) |
+
+### Set for the current session only
+
+**Windows Command Prompt:**
 ```
-Help > Troubleshooting > Enable Developer Mode
+set ANTHROPIC_BASE_URL=http://127.0.0.1:3456
+set ANTHROPIC_API_KEY=sk-your-qwen-key-here
 ```
 
-![Enabling Developer Mode in Cowork](images/step6-developer-mode.png)
- 
-### Configure Third-Party Inference
- 
-From the menu bar:
+**WSL / Linux terminal:**
 ```
-Developer > Configure Third-Party Inference
+export ANTHROPIC_BASE_URL=http://127.0.0.1:3456
+export ANTHROPIC_API_KEY=sk-your-qwen-key-here
 ```
 
-![Opening Third-Party Inference settings](images/step6-third-party-menu.png)
- 
-Enter the following settings:
- 
-| Field | Value |
-|-------|-------|
-| Backend | Gateway (Anthropic-compatible) |
-| Gateway base URL | `http://127.0.0.1:3456` |
-| Gateway API key | Your Qwen API key |
-| Auth scheme | `bearer` |
- 
-Click **Apply Changes**, then **Relaunch Now**.
+![Setting environment variables in terminal](images/cli-step5-env-vars.png)
 
-![Third-Party Inference settings filled in](images/step6-third-party-filled.png)
+> These only last for the current terminal session. See Step 6 to make them permanent.
 
- 
----
- 
-## Step 7 — Test It
- 
-Type the following in Cowork:
- 
-```
-hello
-```
- 
-If you get a response, everything is working correctly!
-
-![Cowork responding to hello message](images/step8-test-response.png)
- 
----
- 
-## Daily Usage
- 
-Every time you restart your PC, simply run:
- 
-```
-ccr start
-```
-
-![Running ccr start on daily use](images/daily-ccr-start.png)
- 
-That's it — Cowork will automatically connect to the router.
- 
----
- 
-## Troubleshooting
- 
-| Problem | Solution |
-|---------|----------|
-| `Can't reach 127.0.0.1:3456` | Run `ccr start` in Command Prompt |
-| `402 credits error` | Check your API key and free quota |
-| `invalid_api_key` | Make sure you're using the Singapore endpoint: `dashscope-intl` |
-| Response is very slow | This is normal on the free tier — just wait a moment |
-| `Provider undefined` | Check the provider name in your config.json |
- 
 ---
  
 ## Important Notes
