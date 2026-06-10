@@ -109,3 +109,16 @@ ccr --version
 You should see a version number for Claude Code and the CCR help menu.
 
 ---
+
+## Step 4: Get Your Qwen API Key
+
+1. Go to [alibabacloud.com](https://www.alibabacloud.com) and log in
+2. Navigate to **Model Studio** → **API Keys**
+3. Click **Create API Key**
+4. Copy the key — it looks like: `sk-xxxxxxxxxxxxxxxx`
+
+![Qwen API Key page](images/step3-api-key.png)
+
+> Keep your API key safe. Never share it with anyone.
+
+---
