@@ -40,3 +40,27 @@ This guide helps you use **Claude Code** (Anthropic's powerful AI coding assista
 | Qwen API Key | From Alibaba Cloud (paid plan) |
 
 ---
+
+## Step 1: Install Node.js
+
+1. Go to [nodejs.org](https://nodejs.org)
+2. Click **Download Node.js (LTS)** — the LTS version is recommended
+3. Run the downloaded installer (`node-vxx.x.x-x64.msi`) and follow the prompts
+4. Make sure **"Add to PATH"** is checked during installation
+
+![Node.js download page](images/step1-node-download.png)
+
+![Node.js installer](images/step1-node-installer.png)
+
+**Verify installation** — open Command Prompt and run:
+
+```
+node --version
+npm --version
+```
+
+![Node.js version check](images/step1-node-version.png)
+
+You should see `v20.x.x` for Node.js and `10.x.x` (or higher) for npm.
+
+---
