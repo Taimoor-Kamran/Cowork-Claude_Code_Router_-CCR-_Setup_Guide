@@ -124,30 +124,30 @@ Save the file (`Ctrl+S` on Notepad, `Ctrl+O` then `Enter` on nano).
 
 ---
  
-## Step 5 — Start the CCR Server
- 
+## Step 4 — Start the CCR Server
+
 ```
 ccr start
 ```
 
 ![Running ccr start](images/step5-ccr-start.png)
- 
-To check the server status:
- 
+
+To confirm it is running, open another terminal and type:
+
 ```
 ccr status
 ```
 
 ![CCR status output](images/step5-ccr-status.png)
- 
-You should see output like this:
- 
+
+You should see:
+
 ```
 ✅ Status: Running
 🌐 Port: 3456
 📡 API Endpoint: http://127.0.0.1:3456
 ```
- 
+
 ---
  
 ## Step 6 — Configure Cowork
