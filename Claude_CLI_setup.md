@@ -35,19 +35,20 @@ claude --version
 
 ---
  
-## Step 3 — Get Your Qwen API Key
- 
+## Step 2 — Get Your Qwen API Key
+
 1. Go to: [modelstudio.console.alibabacloud.com](https://modelstudio.console.alibabacloud.com)
 2. Create an account (select the **Singapore** region)
 3. Add a payment method and enable **Worry-Free Mode**
 4. In the left sidebar, click **API Key**
 5. Click **Create API Key**
 6. Copy your key — it will be in the format `sk-xxxx`
+
 > **Important:** The Singapore region uses a different API endpoint:
 > `https://dashscope-intl.aliyuncs.com`
 
 ![Qwen API Key creation page](images/step3-api-key.png)
- 
+
 ---
  
 ## Step 4 — Configure CCR
