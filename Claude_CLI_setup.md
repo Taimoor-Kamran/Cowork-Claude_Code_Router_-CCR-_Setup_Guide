@@ -172,7 +172,7 @@ Paste the following content, **replacing `YOUR_QWEN_API_KEY_HERE` with your real
 }
 ```
 
-![Config file filled in Notepad](images/step4-config-filled.png)
+![Config file filled in Notepad](images/cli-config-filled.png)
 
 Save the file with `Ctrl+S`.
 
