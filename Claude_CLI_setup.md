@@ -188,3 +188,39 @@ type %USERPROFILE%\.claude-code-router\config.json
 You should see your config with your API key inside.
 
 ---
+
+## Step 6: Start Claude Code
+
+**Start the router** in Command Prompt:
+
+```
+ccr restart
+```
+
+![CCR restart output](images/cli-step6-ccr-restart.png)
+
+You should see:
+
+```
+✅ Service started successfully in the background.
+```
+
+**Launch Claude Code:**
+
+```
+ccr code
+```
+
+![Claude Code launching via CCR](images/cli-step6-ccr-code.png)
+
+**Test it** by typing:
+
+```
+hi
+```
+
+![Claude Code responding via Qwen](images/cli-step6-response.png)
+
+If Qwen responds, your setup is complete!
+
+---
