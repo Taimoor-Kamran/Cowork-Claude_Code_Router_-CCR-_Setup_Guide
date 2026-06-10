@@ -224,3 +224,40 @@ hi
 If Qwen responds, your setup is complete!
 
 ---
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| `npm` not recognized | Node.js not installed or PATH not set — reinstall Node.js and check "Add to PATH" |
+| `ccr` not recognized | Run `npm install -g @musistudio/claude-code-router@latest` again |
+| `Service failed to start` | Check your `config.json` for typos — make sure the API key is correct |
+| `invalid_api_key` | Make sure you pasted your real Qwen API key in `config.json` |
+| Responses are very slow | Normal on lower Qwen tiers — just wait |
+| `ccr code` opens but no response | Run `ccr restart` first, then `ccr code` again |
+
+---
+
+## Quick Reference
+
+| Command | Description |
+|---------|-------------|
+| `ccr restart` | Start or restart the router |
+| `ccr code` | Launch Claude Code |
+| `ccr status` | Check if router is running |
+| `ccr --version` | Show CCR version |
+| `/model` | Switch AI model inside Claude Code |
+| `/quit` | Exit Claude Code |
+
+---
+
+## Versions Used in This Guide
+
+| Tool | Version |
+|------|---------|
+| Node.js | v20.x.x |
+| Qwen CLI | v0.15.6 |
+| Claude Code | v2.1.126 |
+| Claude Code Router | v2.0+ |
+
+---
